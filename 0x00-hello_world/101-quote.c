@@ -1,11 +1,11 @@
 #include <stdio.h>
+#include <unistd.h>
 /**
- * main - print with fprintf
+ * main - print with fputs
  * Return: 1 (success)
  */
 int main(void)
 {
-	fprintf(stdout, "and that piece of art is useful\"");
-	fprintf(stderr, " - Dora Korpar, 2015-10-19");
-	return (1);
+fputs("and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", stdout);
+return (1);
 }
