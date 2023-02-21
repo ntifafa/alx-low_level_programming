@@ -1,19 +1,20 @@
-#include <stdio.h>
-#include <string.h>
+#include "main.h";
+
 /**
- * main - write a program that prints __putchar
+ * main - prints _putchar on a new line
  * Return: 0 (success)
  */
 
 int main(void)
 {
-	char str[100] = "_putchar";
-	int i;
+	_putchar('_');
+	_putchar('p');
+	_putchar('u');
+	_putchar('t');
+	_putchar('c');
+	_putchar('h');
+	_putchar('a');
+	_putchar('r');
 
-	for (i = 0; i < strlen(str); i++)
-	{
-		putchar(str[i]);
-	}
-	putchar('\n');
 	return (0);
 }
