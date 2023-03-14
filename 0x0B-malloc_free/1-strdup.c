@@ -9,14 +9,14 @@
 
 char *_strdup(char *str)
 {
-	unsigned int strlen;
-	unsigned int count;
+	int strlen;
+	int count;
 	char *pt_str;
 
 	if (str == NULL)
 		return (NULL);
 
-	for (strlen = 0; str[strlen]; strlen++)
+	for (strlen = 0; str[strlen] != '\0'; strlen++)
 
 	pt_str = malloc((strlen * sizeof(char)) + 1);
 
@@ -27,7 +27,6 @@ char *_strdup(char *str)
 	{
 		pt_str[count] = str[count];
 	}
-	pt_str[count + 1] = 0;
 	return (pt_str);
 
 	free(pt_str);
