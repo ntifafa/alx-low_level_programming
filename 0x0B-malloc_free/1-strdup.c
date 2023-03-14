@@ -30,4 +30,6 @@ char *_strdup(char *str)
 	}
 	pt_str[count + 1] = 0;
 	return (pt_str);
+
+	free(pt_str);
 }
