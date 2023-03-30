@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * struct list_s - singly linked list
+ * print_list - singly linked list
  * @str: string - (malloc'ed string)
  * @len: length of the string
  * @next: points to the next node
@@ -15,13 +15,13 @@ size_t print_list(const list_t *h)
 	size_t counter = 0;
 /*traverse list_t and print each member*/
 	while (h != NULL)
-{
-	if (h->str == NULL)
-		printf("[0] (nil)\n");
-	else
-		printf("[%u] %s\n", h->len, h->str);
-	h = h->next;
-	counter++;
-}
+	{
+		if (h->str == NULL)
+			printf("[0] (nil)\n");
+		else
+			printf("[%u] %s\n", h->len, h->str);
+		h = h->next;
+		counter++;
+	}
 	return (counter);
 }
