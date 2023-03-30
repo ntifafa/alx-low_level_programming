@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * print_listsingly linked list
+ * print_list - singly linked list
  * @str: string - (malloc'ed string)
  * @len: length of the string
  * @next: points to the next node
