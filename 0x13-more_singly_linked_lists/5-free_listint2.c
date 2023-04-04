@@ -10,7 +10,7 @@ void free_listint2(listint_t **head)
 {
 	/*declare pointers*/
 	listint_t *now, *temp;
-	/*verify memory allocation*/
+	/*verify if list is empty*/
 	if (head == NULL)
 		return;
 	/*point now to memory address of *head*/
