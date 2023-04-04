@@ -3,8 +3,8 @@
 /**
  * pop_listint - deletes head of a linked list
  * @head: double pointer to the memory address of first node
- * Return: node's data (n), or 0 if list is empty 
-*/
+ * Return: node's data (n), or 0 if list is empty
+ */
 
 int pop_listint(listint_t **head)
 {
@@ -24,5 +24,5 @@ int pop_listint(listint_t **head)
 	/*free temp*/
 	free(temp);
 	/*return head's data*/
-	return (n);	
+	return (n);
 }
