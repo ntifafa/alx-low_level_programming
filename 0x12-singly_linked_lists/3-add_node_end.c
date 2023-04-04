@@ -32,6 +32,7 @@ new_node->next = NULL;
 /*If the list is empty, make the new node the head*/
 if (*head == NULL)
 {
+	/*point new_node to head's address*/
 	*head = new_node;
 	return (new_node);
 }
