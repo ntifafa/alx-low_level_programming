@@ -23,6 +23,8 @@ unsigned int binary_to_uint(const char *b)
 	{
 		if (b[i] != '0' && b[i] != '1')
 			return (0);
+
+		if (b[i] == '0' || b[i] == '1')
 		/*bit left shift by 1, add current num and deduct 0 to convert to ASCII num value*/
 		output = (output << 1) + (b[i] - '0');
 		i++;
