@@ -2,7 +2,7 @@
 
 /**
  * print_binary - prints the binary representation of a number
- * @num: value to be passed
+ * @n: value to be passed
  * Return: nothing
  */
 
