@@ -10,9 +10,8 @@
 unsigned int binary_to_uint(const char *b)
 {
 	/*declare and initialize variables*/
-	unsigned int i =0;
+	unsigned int i = 0;
 	unsigned int output = 0;
-	
 	/*check whether string is empty*/
 	if (b == NULL)
 		return (0);
@@ -22,7 +21,6 @@ unsigned int binary_to_uint(const char *b)
 	{
 		if (b[i] == '0' || b[i] == '1')
 		{
-			/*1 bit left shift, add current num and deduct 0 to convert to ASCII num value*/
 			output = (output << 1) + (b[i] - '0');
 		}
 		else
