@@ -8,7 +8,7 @@
 */
 
 int get_bit(unsigned long int n, unsigned int index)
-{	
+{
 	/*verify if index is within valid range*/
 	if (index >= sizeof(unsigned long int) * 8)
 	{
