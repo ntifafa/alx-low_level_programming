@@ -18,7 +18,7 @@ int create_file(const char *filename, char *text_content)
 	{
 		return (-1);
 	}
-	/*open file, write and truncate existing file or create*/
+	/*open, write and truncate existing file or create*/
 	fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 	{
 		if (fd == -1)
@@ -35,7 +35,7 @@ int create_file(const char *filename, char *text_content)
 		len = strlen(text_content); /*get length of text_content*/
 		bytesW = write(fd, text_content, len); /*write string to file*/
 
-		if (bytesW != (ssize_t)len) /*if bytesW exceeds len*/
+		if (bytesW != (ssize_t)len) /*if bytesW doesn't match len*/
 		{
 			close(fd);
 			return (-1);
