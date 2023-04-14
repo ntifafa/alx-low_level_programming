@@ -32,10 +32,10 @@ int create_file(const char *filename, char *text_content)
 	}
 	if (text_content != NULL) /*verify text_content isn't empty*/
 	{
-		len = strlen(text_content); /*get length of text_content*/
+		len = strlen(text_content); /*get length of string*/
 		bytesW = write(fd, text_content, len); /*write string to file*/
 
-		if (bytesW != (ssize_t)len) /*if bytesW doesn't match len*/
+		if (bytesW != (ssize_t)len) /*if bytesW doesn't match string len*/
 		{
 			close(fd);
 			return (-1);
