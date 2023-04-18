@@ -37,13 +37,13 @@ int main(int argc, char *argv[])
 
 	if (argc != 3) /*if number of arguments exceeds 2, print error*/
 	{
-		dprintf("Usage: cp file_from file_to\n");
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 	fdFrom = open(argv[1], O_RDONLY); /*open input file with read-only perm*/
 	if (fdFrom == -1) /*if file opening fails*/
 	{
-		dprintf("Error: Can't read from file", 98);
+		dprintf(STDERR_FILENO, "Error: Can't read from file\n");
 		exit(97);
 	}
 	/*open, write and truncate output file or create with specified perms*/
