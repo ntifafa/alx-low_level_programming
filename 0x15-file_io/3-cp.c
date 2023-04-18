@@ -47,7 +47,8 @@ int main(int argc, char *argv[])
 		exit(97);
 	}
 	/*open, write and truncate output file or create with specified perms*/
-	fdTo = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
+	fdTo = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0644);
+
 	if (fdTo == -1) /*if opening fails*/
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to");
