@@ -2,7 +2,7 @@
 
 /**
  * closingTime - terminates file descriptors
- * fdFrom: input file descriptor
+ * @fdFrom: input file descriptor
  * @fdTo: destination file descritor
  * Return: nothing
 */
@@ -47,7 +47,7 @@ int main(int argc, char *argv[])
 		exit(97);
 	}
 	/*open, write and truncate output file or create with specified perms*/
-	fdTo = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
+	fdTo = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0644);
 	if (fdTo == -1) /*if opening fails*/
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to");
