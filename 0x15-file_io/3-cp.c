@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
 	if (fdFrom == -1) /*if file opening fails*/
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file\n");
-		exit(97);
+		exit(98);
 	}
 	/*open, write and truncate output file or create with specified perms*/
 	fdTo = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0644);
@@ -60,7 +60,7 @@ int main(int argc, char *argv[])
 		if ((bytesW != bytesR) || (bytesW != bytesR))
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-			exit(91);
+			exit(99);
 		}
 	}
 	if (bytesR == -1)
