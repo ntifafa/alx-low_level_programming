@@ -43,7 +43,7 @@ int main(int argc, char *argv[])
 	fdFrom = open(argv[1], O_RDONLY); /*open input file with read-only perm*/
 	if (fdFrom == -1) /*if file opening fails*/
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file\n");
+		dprintf(STDERR_FILENO, "Error: Can't read from file\n", argv[1]);
 		exit(98);
 	}
 	/*open, write and truncate output file or create with specified perms*/
