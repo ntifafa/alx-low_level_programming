@@ -42,7 +42,7 @@ int main(int argc, char *argv[])
 	fdFrom = open(argv[1], O_RDONLY); /*open input file with read-only perm*/
 	if (fdFrom == -1) /*if file opening fails*/
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file\n", argv[1]);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
 	/*open, write and truncate output file or create with specified perms*/
@@ -50,7 +50,7 @@ int main(int argc, char *argv[])
 
 	if (fdTo == -1) /*if opening fails*/
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to");
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
 	while ((bytesR = read(fdFrom, buff, 1024)) > 0)
