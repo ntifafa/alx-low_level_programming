@@ -21,7 +21,6 @@ void closingTime(int fdFrom, int fdTo)
 	}
 }
 
-
 /**
  * main - entry point
  * Description: copies the content of a file to another
